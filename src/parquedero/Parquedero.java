@@ -5,8 +5,10 @@
  */
 package parquedero;
 
-import parquederoControladores.Controlador;
-import parquederoModelos.ModeloInicio;
+import parquederoControladores.ControladorInicio;
+import parquederoModelos.Parqueadero;
+import parquederoModelos.Propietarios;
+import parquederoModelos.Vehiculo;
 import parquederoVistas.VistaInicio;
 
 /**
@@ -20,10 +22,16 @@ public class Parquedero {
      */
     public static void main(String[] args) {
         
-    ModeloInicio modeloIni = new ModeloInicio();
-    VistaInicio vistaIni = new VistaInicio();
-    vistaIni.setVisible(true);
-    Controlador controlador = new Controlador(modeloIni, vistaIni);
+    
+    VistaInicio vistaInicio = new VistaInicio();
+    vistaInicio.setVisible(true);
+    Parqueadero parqueadero = new Parqueadero();
+    Vehiculo vehiculo = new Vehiculo();
+    Propietarios propietarios = new Propietarios();
+        
+    
+ControladorInicio controladorInicio = new ControladorInicio(vistaInicio, parqueadero, vehiculo, propietarios);
+
         
     }
     

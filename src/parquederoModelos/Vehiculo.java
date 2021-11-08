@@ -9,12 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
-
-/**
- *
- * @author sergio.bohorquez
- */
 public class Vehiculo {    
     private String placa;
     private String idPropietario;
@@ -23,7 +17,7 @@ public class Vehiculo {
     private String fechaSalida;
     private String horaSalida;
     
-    ModeloInicio inicio = new ModeloInicio();
+    //ModeloInicio inicio = new ModeloInicio();
     public Vehiculo() {
     }
 
@@ -74,10 +68,10 @@ public class Vehiculo {
     public void setHoraSalida(String horaSalida) {
         this.horaSalida = horaSalida;
     }
-    public String consultaPlaca(String placa) throws SQLException{
+   /* public String consultaPlaca(String placa) throws SQLException{
        Connection conexion = inicio.conectarBD();
        Statement s = conexion.createStatement();
        ResultSet rs = s.executeQuery("SELECT placa FROM vehiculo WHERE placa = "+ placa);
        return rs.getString(0);
-    }
+    }*/
 }

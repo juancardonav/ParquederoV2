@@ -28,7 +28,7 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        BotonLiquidar = new javax.swing.JButton();
+        BotonCrear = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Placa = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -38,6 +38,8 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
         Nombre = new javax.swing.JTextField();
         Telefono = new javax.swing.JTextField();
         Celular = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        IdPropietario = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,12 +48,12 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText("Dream Parking");
 
-        BotonLiquidar.setBackground(new java.awt.Color(255, 255, 102));
-        BotonLiquidar.setForeground(java.awt.Color.red);
-        BotonLiquidar.setText("Liquidar Vehiculo");
-        BotonLiquidar.addActionListener(new java.awt.event.ActionListener() {
+        BotonCrear.setBackground(new java.awt.Color(255, 255, 102));
+        BotonCrear.setForeground(java.awt.Color.red);
+        BotonCrear.setText("Crear Cliente");
+        BotonCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonLiquidarActionPerformed(evt);
+                BotonCrearActionPerformed(evt);
             }
         });
 
@@ -77,18 +79,35 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setText("Cedula");
+
+        IdPropietario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IdPropietarioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(99, 99, 99))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(99, 99, 99))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35)
+                                .addComponent(IdPropietario)
+                                .addGap(28, 28, 28)
+                                .addComponent(BotonCrear)))
+                        .addGap(29, 29, 29))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -97,12 +116,10 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(Nombre)
-                            .addComponent(Placa, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                            .addComponent(Placa)
                             .addComponent(Telefono)
-                            .addComponent(Celular))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BotonLiquidar)))
-                .addGap(29, 29, 29))
+                            .addComponent(Celular, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(45, 45, 45)
@@ -114,11 +131,20 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BotonCrear)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(IdPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Placa, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BotonLiquidar))
+                    .addComponent(Placa, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -131,7 +157,7 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Celular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addGap(32, 32, 32))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(179, Short.MAX_VALUE)
@@ -142,9 +168,9 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BotonLiquidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonLiquidarActionPerformed
+    private void BotonCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCrearActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BotonLiquidarActionPerformed
+    }//GEN-LAST:event_BotonCrearActionPerformed
 
     private void PlacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlacaActionPerformed
         // TODO add your handling code here:
@@ -153,6 +179,10 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
     private void NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NombreActionPerformed
+
+    private void IdPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdPropietarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IdPropietarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,16 +220,18 @@ public class VistaCreacionCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonLiquidar;
-    private javax.swing.JTextField Celular;
-    private javax.swing.JTextField Nombre;
-    private javax.swing.JTextField Placa;
-    private javax.swing.JTextField Telefono;
+    public javax.swing.JButton BotonCrear;
+    public javax.swing.JTextField Celular;
+    public javax.swing.JTextField IdPropietario;
+    public javax.swing.JTextField Nombre;
+    public javax.swing.JTextField Placa;
+    public javax.swing.JTextField Telefono;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }
