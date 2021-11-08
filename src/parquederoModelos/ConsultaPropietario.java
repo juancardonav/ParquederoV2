@@ -8,10 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-/**
- *
- * @author sergio.bohorquez
- */
+
 public class ConsultaPropietario extends ModeloInicio {
 
     PreparedStatement consultaBD;
@@ -19,7 +16,7 @@ public class ConsultaPropietario extends ModeloInicio {
 
     public boolean registrarPropietario(Propietarios propietario) {
         Connection conexion = conectarBD();
-        String query = "INSERT INTO propietario (cedula,nombres,placa,telefonoF,telefonoM)"
+        String query = "INSERT INTO propietarios (cedula,nombres,placa,telefonoF,telefonoM)"
                 + "VALUES (?,?,?,?,?)";
         try {
             consultaBD = conexion.prepareStatement(query);

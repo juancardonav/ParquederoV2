@@ -33,7 +33,7 @@ public class Controlador implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        modeloIni.conectarBD();
+       // modeloIni.conectarBD();
     }
     
     
