@@ -19,17 +19,16 @@ public class ConsultaVehiculo extends ModeloInicio{
     
     public boolean registrarVehiculo(Vehiculo vehiculo){
         Connection conexion = conectarBD();
-        String query = "INSERT INTO vehiculos (fechaEntrada,fechaSalida,horaEntrada,horaSalida,idPropietario,placa)"
-                        + "VALUES (?,?,?,?,?,?)";
+        String query = "INSERT INTO vehiculos (placa,idPropietario,dateEntry,dateOut)"
+                        + "VALUES (?,?,?,?)";
         try{
             consultaBD=conexion.prepareStatement(query);
+            consultaBD.setString(1,vehiculo.getPlaca());
+            consultaBD.setString(2,vehiculo.getIdPropietario());
+            consultaBD.setString(3,vehiculo.getDateEntry());
+            consultaBD.setString(4,vehiculo.getDateOut());
             
-            consultaBD.setString(1,vehiculo.getFechaEntrada());
-            consultaBD.setString(2,vehiculo.getFechaSalida());
-            consultaBD.setString(3,vehiculo.getHoraEntrada());
-            consultaBD.setString(4,vehiculo.getHoraSalida());
-            consultaBD.setString(5,vehiculo.getIdPropietario());
-            consultaBD.setString(6,vehiculo.getPlaca());
+            
             
             int resultado = consultaBD.executeUpdate();
             
@@ -39,7 +38,7 @@ public class ConsultaVehiculo extends ModeloInicio{
                 return false;
             }
         }catch(Exception error){
-            System.out.println("upsss."+error);
+            System.out.println("Error en el registro del vehiculo:"+error);
             return false;
         }
           
@@ -63,14 +62,11 @@ public class ConsultaVehiculo extends ModeloInicio{
             
             //Orgaizo el resultado
             Vehiculo vehiculo = new Vehiculo();
-            if(resultadoBD.next()){
-                
-                vehiculo.setPlaca(resultadoBD.getString(placa));
-                vehiculo.setFechaEntrada(resultadoBD.getString("FechaEntrada"));
-                vehiculo.setHoraEntrada(resultadoBD.getString("HoraEntrada"));
-                vehiculo.setFechaSalida(resultadoBD.getString("FechaSalida"));
-                vehiculo.setHoraSalida(resultadoBD.getString("HoraSalida"));
-
+            if(resultadoBD.next()){               
+                vehiculo.setPlaca(resultadoBD.getString("placa"));
+                vehiculo.setIdPropietario(resultadoBD.getString("idPropietario"));
+                vehiculo.setDateEntry(resultadoBD.getString("dateEntry"));
+                vehiculo.setDateOut(resultadoBD.getString("dateOut"));
                 
                 return vehiculo;
                 

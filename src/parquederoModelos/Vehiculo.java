@@ -12,10 +12,9 @@ import java.sql.Statement;
 public class Vehiculo {    
     private String placa;
     private String idPropietario;
-    private String fechaEntrada;
-    private String horaEntrada;
-    private String fechaSalida;
-    private String horaSalida;
+    private String dateEntry;
+    private String dateOut;
+
     
     //ModeloInicio inicio = new ModeloInicio();
     public Vehiculo() {
@@ -37,41 +36,26 @@ public class Vehiculo {
         this.idPropietario = idPropietario;
     }
 
-    public String getFechaEntrada() {
-        return fechaEntrada;
+    public String getDateEntry() {
+        return dateEntry;
     }
 
-    public void setFechaEntrada(String fechaEntrada) {
-        this.fechaEntrada = fechaEntrada;
+    public void setDateEntry(String dateEntry) {
+        this.dateEntry = dateEntry;
     }
 
-    public String getHoraEntrada() {
-        return horaEntrada;
+    public String getDateOut() {
+        return dateOut;
     }
 
-    public void setHoraEntrada(String horaEntrada) {
-        this.horaEntrada = horaEntrada;
+    public void setDateOut(String dateOut) {
+        this.dateOut = dateOut;
     }
 
-    public String getFechaSalida() {
-        return fechaSalida;
-    }
 
-    public void setFechaSalida(String fechaSalida) {
-        this.fechaSalida = fechaSalida;
-    }
+ 
+    
 
-    public String getHoraSalida() {
-        return horaSalida;
-    }
-
-    public void setHoraSalida(String horaSalida) {
-        this.horaSalida = horaSalida;
-    }
-   /* public String consultaPlaca(String placa) throws SQLException{
-       Connection conexion = inicio.conectarBD();
-       Statement s = conexion.createStatement();
-       ResultSet rs = s.executeQuery("SELECT placa FROM vehiculo WHERE placa = "+ placa);
-       return rs.getString(0);
-    }*/
 }
+    
+ 

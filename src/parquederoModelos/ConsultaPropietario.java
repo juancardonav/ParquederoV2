@@ -16,16 +16,15 @@ public class ConsultaPropietario extends ModeloInicio {
 
     public boolean registrarPropietario(Propietarios propietario) {
         Connection conexion = conectarBD();
-        String query = "INSERT INTO propietarios (cedula,nombres,placa,telefonoF,telefonoM)"
-                + "VALUES (?,?,?,?,?)";
+        String query = "INSERT INTO propietarios (cedula,nombres,telefonoF,telefonoM)"
+                + "VALUES (?,?,?,?)";
         try {
             consultaBD = conexion.prepareStatement(query);
 
             consultaBD.setString(1, propietario.getCedula());
             consultaBD.setString(2, propietario.getNombres());
-            consultaBD.setString(3, propietario.getPlaca());
-            consultaBD.setString(4, propietario.getTelefonoF());
-            consultaBD.setString(5, propietario.getTelefonoM());
+            consultaBD.setString(3, propietario.getTelefonoF());
+            consultaBD.setString(4, propietario.getTelefonoM());
 
             int resultado = consultaBD.executeUpdate();
             
@@ -35,7 +34,7 @@ public class ConsultaPropietario extends ModeloInicio {
                 return false;
             }
         } catch (Exception error) {
-            System.out.println("upsss." + error);
+            System.out.println("Error en el registro del propietario: " + error);
             return false;
         }
 
@@ -54,7 +53,6 @@ public class ConsultaPropietario extends ModeloInicio {
             if (resultadoBD.next()) {
                 propietario.setCedula(resultadoBD.getString("cedula"));
                 propietario.setNombres(resultadoBD.getString("nombres"));
-                propietario.setPlaca(resultadoBD.getString("placa"));
                 propietario.setTelefonoF(resultadoBD.getString("telefonoF"));
                 propietario.setTelefonoM(resultadoBD.getString("telefonoM"));
                 return propietario;

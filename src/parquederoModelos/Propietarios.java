@@ -13,7 +13,6 @@ public class Propietarios {
     private String nombres;
     private String telefonoF;
     private String telefonoM;
-    private String placa;
 
     public Propietarios() {
     }
@@ -50,12 +49,4 @@ public class Propietarios {
         this.telefonoM = telefonoM;
     }
 
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-    
 }

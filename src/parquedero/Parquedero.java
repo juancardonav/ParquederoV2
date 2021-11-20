@@ -6,9 +6,11 @@
 package parquedero;
 
 import parquederoControladores.ControladorInicio;
+import parquederoControladores.ControladorPrueba;
 import parquederoModelos.Parqueadero;
 import parquederoModelos.Propietarios;
 import parquederoModelos.Vehiculo;
+import parquederoVistas.Prueba;
 import parquederoVistas.VistaInicio;
 
 /**
@@ -28,9 +30,8 @@ public class Parquedero {
     Parqueadero parqueadero = new Parqueadero();
     Vehiculo vehiculo = new Vehiculo();
     Propietarios propietarios = new Propietarios();
-        
     
-ControladorInicio controladorInicio = new ControladorInicio(vistaInicio, parqueadero, vehiculo, propietarios);
+    ControladorInicio controladorInicio = new ControladorInicio(vistaInicio,parqueadero,vehiculo,propietarios);
 
         
     }

@@ -10,8 +10,11 @@ import parquederoModelos.ConsultaVehiculo;
 import parquederoModelos.Parqueadero;
 import parquederoModelos.Propietarios;
 import parquederoModelos.Vehiculo;
+import parquederoVistas.Prueba;
 import parquederoVistas.VistaCreacionCliente;
+import parquederoVistas.VistaIngreso;
 import parquederoVistas.VistaInicio;
+import parquederoVistas.VistaLiquidarParqueadero;
 
 
 public class ControladorInicio implements ActionListener{
@@ -43,22 +46,27 @@ public class ControladorInicio implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         
-          //Crear objeto de la clase consulta
-       ConsultaVehiculo consultaVehiculo = new ConsultaVehiculo();
+            //Crear objeto de la clase consulta
+            ConsultaVehiculo consultaVehiculo = new ConsultaVehiculo();
         
-        //Obtener la placa de la vista
-        String placa=vistaInicio.Placa.getText();
+            //Obtener la placa de la vista
+            String placa=vistaInicio.Placa.getText();
         
-        //Intento buscar el vehiculo por placa
-        if(consultaVehiculo.buscarVehiculo(placa) != null){
-            JOptionPane.showMessageDialog(null, "La placa existe");
-             vistaInicio.setVisible(false);
-        }else{
-            VistaCreacionCliente vistaCreacionCliente = new VistaCreacionCliente();
-            vistaCreacionCliente.setVisible(true);
-            vistaInicio.setVisible(false);
-            ControladorCreacionCliente controladorCreacionCliente =new ControladorCreacionCliente(parqueadero, propietarios, vehiculo ,vistaCreacionCliente);
-        }  
+            //Intento buscar el vehiculo por placa
+            if(consultaVehiculo.buscarVehiculo(placa) != null){
+                 vistaInicio.setVisible(false);
+                 VistaLiquidarParqueadero vistaLiquidarParqueadero = new VistaLiquidarParqueadero();
+                 vistaLiquidarParqueadero.setVisible(true);
+                 
+            }else{
+                /*VistaCreacionCliente vistaCreacionCliente = new VistaCreacionCliente();
+                vistaCreacionCliente.setVisible(true);*/
+                
+                Prueba vistaprueba = new Prueba();
+                vistaInicio.setVisible(false);
+                vistaprueba.setVisible(true);
+                ControladorPrueba controladorPrueba =new ControladorPrueba(vistaprueba);
+            }  
        
     }
 

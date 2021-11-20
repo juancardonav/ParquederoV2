@@ -9,20 +9,20 @@ package parquederoModelos;
  * @author sergio.bohorquez
  */
 public class Parqueadero {
-    private int limit;
+    private int limited;
     private int tarifa;
-    private String placa;
+    private int idParqueadero;
     private int celdasDisponibles;
 
     public Parqueadero() {
     }
 
-    public int getLimit() {
-        return limit;
+    public int getLimited() {
+        return limited;
     }
 
-    public void setLimit(int limit) {
-        this.limit = limit;
+    public void setLimited(int limited) {
+        this.limited = limited;
     }
 
     public int getTarifa() {
@@ -33,12 +33,12 @@ public class Parqueadero {
         this.tarifa = tarifa;
     }
 
-    public String getPlaca() {
-        return placa;
+    public int getidParqueadero() {
+        return idParqueadero;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public void setidParqueadero(int idParqueadero) {
+        this.idParqueadero = idParqueadero;
     }
 
     public int getCeldasDisponibles() {

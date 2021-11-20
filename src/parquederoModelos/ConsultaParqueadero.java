@@ -18,14 +18,13 @@ public class ConsultaParqueadero extends ModeloInicio{
 
     public boolean registrarparqueadero(Parqueadero parqueadero) {
         Connection conexion = conectarBD();
-        String query = "INSERT INTO parqueadero (celdasDisponibles,limit,placa,tarifa)"
+        String query = "INSERT INTO parqueadero (celdasDisponibles,limited,idParqueadero,tarifa)"
                 + "VALUES (?,?,?,?)";
         try {
             consultaBD = conexion.prepareStatement(query);
-
             consultaBD.setInt(1, parqueadero.getCeldasDisponibles());
-            consultaBD.setInt(2, parqueadero.getLimit());
-            consultaBD.setString(3, parqueadero.getPlaca());
+            consultaBD.setInt(2, parqueadero.getLimited());
+            consultaBD.setInt(3, parqueadero.getidParqueadero());
             consultaBD.setInt(4, parqueadero.getTarifa());
 
             int resultado = consultaBD.executeUpdate();
@@ -42,20 +41,20 @@ public class ConsultaParqueadero extends ModeloInicio{
 
     }
 
-    public Parqueadero consultaparqueadero(String placa) {
+    public Parqueadero consultaparqueadero(int idParqueadero) {
         Connection conexion = conectarBD();
-        String query = "SELECT * from parqueadero where placa = ?";
+        String query = "SELECT * from parqueadero where idParqueadero = ?";
         try {
             consultaBD = conexion.prepareStatement(query);
 
-            consultaBD.setString(1, placa);
+            consultaBD.setInt(1, idParqueadero);
 
             resultadoBD = consultaBD.executeQuery();
             Parqueadero parqueadero = new Parqueadero();
             if (resultadoBD.next()) {
                 parqueadero.setCeldasDisponibles(resultadoBD.getInt("celdasDisponibles"));
-                parqueadero.setLimit(resultadoBD.getInt("limit"));
-                parqueadero.setPlaca(resultadoBD.getString("placa"));
+                parqueadero.setLimited(resultadoBD.getInt("limited"));
+                parqueadero.setidParqueadero(resultadoBD.getInt("idParqueadero"));
                 parqueadero.setTarifa(resultadoBD.getInt("tarifa"));
                 return parqueadero;
             } else {
