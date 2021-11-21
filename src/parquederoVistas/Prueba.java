@@ -32,55 +32,97 @@ public class Prueba extends javax.swing.JFrame {
         cajanombre = new javax.swing.JTextField();
         cajatelefono = new javax.swing.JTextField();
         cajacedula = new javax.swing.JTextField();
+        javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel4 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel5 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel7 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel8 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel9 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel11 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel10 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel12 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel13 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cajaplaca.setText("placa");
+        cajaplaca.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cajaplaca.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        cajaplaca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaplacaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cajaplaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 190, 50));
 
-        botonRegistrar.setText("ingresar");
+        botonRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/enter.png"))); // NOI18N
+        getContentPane().add(botonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 80, 70));
 
-        cajanombre.setText("nombre");
+        cajanombre.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cajanombre.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        getContentPane().add(cajanombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 190, 50));
 
-        cajatelefono.setText("telefono");
+        cajatelefono.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cajatelefono.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        getContentPane().add(cajatelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 190, 50));
 
-        cajacedula.setText("cedula");
+        cajacedula.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cajacedula.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        getContentPane().add(cajacedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 190, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cajaplaca)
-                            .addComponent(cajanombre)
-                            .addComponent(cajacedula)
-                            .addComponent(cajatelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(botonRegistrar)))
-                .addContainerGap(174, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(cajaplaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(cajanombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(cajacedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addComponent(cajatelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83)
-                .addComponent(botonRegistrar)
-                .addContainerGap())
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/businessman (1).png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 70, 70));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/businessman (1).png"))); // NOI18N
+        jLabel4.setText("jLabel1");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 70, 70));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/id-card.png"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 70, 70));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("PLACA:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 80, 30));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("CÉDULA:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 80, 30));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("TELEFONO:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 80, 30));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/telephone (1).png"))); // NOI18N
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/carsharing.png"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("NOMBRE:");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 80, 40));
+
+        jLabel13.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("GUARDAR");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 100, 50));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Negro Amarillo Halcón Moderno Gamer Esports Logotipo Animado (3).png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cajaplacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaplacaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaplacaActionPerformed
 
     /**
      * @param args the command line arguments

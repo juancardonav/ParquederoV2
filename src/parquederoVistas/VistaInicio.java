@@ -5,15 +5,10 @@
  */
 package parquederoVistas;
 
-/**
- *
- * @author Usuario
- */
+
 public class VistaInicio extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaInicio
-     */
+
     public VistaInicio() {
         initComponents();
     }
@@ -29,64 +24,46 @@ public class VistaInicio extends javax.swing.JFrame {
 
         jScrollBar1 = new javax.swing.JScrollBar();
         BotonConsultar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         Placa = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel10 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel8 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel9 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotonConsultar.setText("Consultar");
+        BotonConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/enter.png"))); // NOI18N
         BotonConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonConsultarActionPerformed(evt);
             }
         });
+        getContentPane().add(BotonConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 70, 70));
 
-        jLabel1.setBackground(new java.awt.Color(204, 255, 51));
-        jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 3, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel1.setText("Dream Parking");
-
-        Placa.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 11)); // NOI18N
+        Placa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Placa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PlacaActionPerformed(evt);
             }
         });
+        getContentPane().add(Placa, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 190, 50));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel2.setText("Placa:");
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/carsharing.png"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(132, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BotonConsultar)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Placa, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(122, 122, 122))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Placa, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addComponent(BotonConsultar)
-                .addContainerGap(58, Short.MAX_VALUE))
-        );
+        jLabel8.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("CONSULTAR");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 100, 50));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("PLACA:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 80, 30));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Negro Amarillo Halcón Moderno Gamer Esports Logotipo Animado (4).png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -137,8 +114,6 @@ public class VistaInicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BotonConsultar;
     public javax.swing.JTextField Placa;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollBar jScrollBar1;
     // End of variables declaration//GEN-END:variables
 }

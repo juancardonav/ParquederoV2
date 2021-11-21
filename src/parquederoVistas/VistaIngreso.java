@@ -27,61 +27,55 @@ public class VistaIngreso extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         BotonIngresar = new javax.swing.JButton();
         Placa = new javax.swing.JTextField();
+        javax.swing.JLabel jLabel10 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel8 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel95 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel9 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(204, 255, 51));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
-        jLabel1.setText("Dream Parking Regidtr");
-
-        BotonIngresar.setBackground(new java.awt.Color(255, 255, 102));
+        BotonIngresar.setBackground(new java.awt.Color(255, 255, 255));
         BotonIngresar.setForeground(java.awt.Color.red);
-        BotonIngresar.setText("Ingresar Vehiculo");
+        BotonIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/enter.png"))); // NOI18N
         BotonIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonIngresarActionPerformed(evt);
             }
         });
+        getContentPane().add(BotonIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, 80, 70));
 
+        Placa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Placa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PlacaActionPerformed(evt);
             }
         });
+        getContentPane().add(Placa, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 150, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(109, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(BotonIngresar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(Placa, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Placa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(BotonIngresar)
-                .addContainerGap(90, Short.MAX_VALUE))
-        );
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/carsharing.png"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("VEHICULO");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 100, 20));
+
+        jLabel95.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jLabel95.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel95.setText("PLACA:");
+        getContentPane().add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 80, 30));
+
+        jLabel9.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("INGRESAR ");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 100, 20));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Negro Amarillo Halcón Moderno Gamer Esports Logotipo Animado (5).png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,6 +126,5 @@ public class VistaIngreso extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BotonIngresar;
     public javax.swing.JTextField Placa;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

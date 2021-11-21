@@ -56,35 +56,41 @@ public class ControladorLiquidar implements ActionListener {
             long tiempoDiferencia = salida.getTime() - entrada.getTime();
             TimeUnit unidadTiempo = TimeUnit.MINUTES;
             long tiempoParqueadero = unidadTiempo.convert(tiempoDiferencia, TimeUnit.MILLISECONDS);
+            String TiempoParqueado = String.valueOf(tiempoParqueadero);
 
             long valorPagar = tiempoParqueadero * 100;
-
+            String ValorPagar = String.valueOf(valorPagar);
             vehiculo.setDateOut(fechaSalida);
 
             if (consultaVehiculo.actualizar(vehiculo)) {
+
                 JOptionPane.showMessageDialog(null, "Propietarie del vehiculo: " + placa + "\n" + "\nFecha Entrada: " + fechaEntrada + "\n"
                         + "\nFecha Salida: " + fechaSalida + "\n"
                         + "\nSu tiempo en el parqueadero es: " + tiempoParqueadero + " minutos" + "\n"
                         + "\nY el valor a pagar es:  " + "$" + valorPagar + "\n" + "  " + "\n");
                 
-                
+                VistaLiquidarParqueadero vistaLiquidarParqueadero = new VistaLiquidarParqueadero();
+                vistaLiquidarParqueadero.CajaHoraEtrada.setText(fechaEntrada);
+                vistaLiquidarParqueadero.CajaHoraSalida.setText(fechaSalida);
+                vistaLiquidarParqueadero.CajaTiempoTotal.setText(TiempoParqueado);
+                vistaLiquidarParqueadero.CajaValorpagar.setText(ValorPagar);
+                vistaLiquidarParqueadero.CajaCompañere.setText("¡VUELVA PRONTO COMPAÑERE!");
+
                 vistaLiquidarParqueadero.setVisible(false);
                 VistaInicio vistaInicio = new VistaInicio();
                 vistaInicio.setVisible(true);
-                
-                /*System.exit(0);*/
 
+                /*System.exit(0);*/
             } else {
                 JOptionPane.showMessageDialog(null, "Error en la salida");
             }
-            
+
             //Enviar null a la fecha de salida
             vehiculo.setDateOut(null);
             consultaVehiculo.actualizar(vehiculo);
-            
+
             vehiculo.setDateEntry(null);
             consultaVehiculo.actualizarEntrada(vehiculo);
-
 
         } catch (Exception e) {
 
