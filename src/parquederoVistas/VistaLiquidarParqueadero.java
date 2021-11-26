@@ -27,37 +27,19 @@ public class VistaLiquidarParqueadero extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        CajaHoraEtrada = new javax.swing.JLabel();
         Placa = new javax.swing.JTextField();
         BotonLiquidar = new javax.swing.JButton();
         javax.swing.JLabel jLabel10 = new javax.swing.JLabel();
         javax.swing.JLabel jLabel9 = new javax.swing.JLabel();
         javax.swing.JLabel jLabel96 = new javax.swing.JLabel();
-        CajaHoraSalida = new javax.swing.JLabel();
-        javax.swing.JLabel jLabel98 = new javax.swing.JLabel();
-        javax.swing.JLabel jLabel101 = new javax.swing.JLabel();
-        CajaCompañere = new javax.swing.JLabel();
         javax.swing.JLabel jLabel97 = new javax.swing.JLabel();
-        javax.swing.JLabel jLabel104 = new javax.swing.JLabel();
-        javax.swing.JLabel jLabel106 = new javax.swing.JLabel();
-        CajaValorpagar = new javax.swing.JLabel();
-        CajaTiempoTotal = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        cajaprueba = new javax.swing.JTextField();
         javax.swing.JLabel jLabel100 = new javax.swing.JLabel();
         CajaValor1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 153));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setText("Placa");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 76, 59, 24));
-
-        CajaHoraEtrada.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        CajaHoraEtrada.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(CajaHoraEtrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 150, 30));
 
         Placa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Placa.addActionListener(new java.awt.event.ActionListener() {
@@ -90,53 +72,10 @@ public class VistaLiquidarParqueadero extends javax.swing.JFrame {
         jLabel96.setText("PLACA:");
         getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 80, 30));
 
-        CajaHoraSalida.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        CajaHoraSalida.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(CajaHoraSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 150, 30));
-
-        jLabel98.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jLabel98.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel98.setText("HORA SALIDA:");
-        getContentPane().add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 140, 30));
-
-        jLabel101.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jLabel101.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel101.setText("VALOR A PAGAR");
-        getContentPane().add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 160, 30));
-
-        CajaCompañere.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        CajaCompañere.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(CajaCompañere, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 300, 30));
-
         jLabel97.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel97.setForeground(new java.awt.Color(255, 255, 255));
         jLabel97.setText("PLACA:");
         getContentPane().add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 80, 30));
-
-        jLabel104.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jLabel104.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel104.setText("TIEMPO PARQUEADO:");
-        getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 160, 30));
-
-        jLabel106.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jLabel106.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel106.setText("FECHA ENTRADA:");
-        getContentPane().add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 140, 30));
-
-        CajaValorpagar.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        CajaValorpagar.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(CajaValorpagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 150, 30));
-
-        CajaTiempoTotal.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        CajaTiempoTotal.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(CajaTiempoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 150, 30));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Negro Amarillo Halcón Moderno Gamer Esports Logotipo Animado (6).png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -280, 500, 1060));
-
-        cajaprueba.setForeground(new java.awt.Color(0, 255, 0));
-        cajaprueba.setText("jTextField1");
-        getContentPane().add(cajaprueba, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, -1, -1));
 
         jLabel100.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel100.setForeground(new java.awt.Color(255, 255, 255));
@@ -145,6 +84,9 @@ public class VistaLiquidarParqueadero extends javax.swing.JFrame {
         CajaValor1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         CajaValor1.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(CajaValor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 150, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Negro Amarillo Halcón Moderno Gamer Esports Logotipo Animado (6).png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -194,15 +136,8 @@ public class VistaLiquidarParqueadero extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BotonLiquidar;
-    public javax.swing.JLabel CajaCompañere;
-    public javax.swing.JLabel CajaHoraEtrada;
-    public javax.swing.JLabel CajaHoraSalida;
-    public javax.swing.JLabel CajaTiempoTotal;
     public javax.swing.JLabel CajaValor1;
-    public javax.swing.JLabel CajaValorpagar;
     public javax.swing.JTextField Placa;
-    public javax.swing.JTextField cajaprueba;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

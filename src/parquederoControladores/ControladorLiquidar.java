@@ -69,12 +69,6 @@ public class ControladorLiquidar implements ActionListener {
                         + "\nSu tiempo en el parqueadero es: " + tiempoParqueadero + " minutos" + "\n"
                         + "\nY el valor a pagar es:  " + "$" + valorPagar + "\n" + "  " + "\n");
                 
-                VistaLiquidarParqueadero vistaLiquidarParqueadero = new VistaLiquidarParqueadero();
-                vistaLiquidarParqueadero.CajaHoraEtrada.setText(fechaEntrada);
-                vistaLiquidarParqueadero.CajaHoraSalida.setText(fechaSalida);
-                vistaLiquidarParqueadero.CajaTiempoTotal.setText(TiempoParqueado);
-                vistaLiquidarParqueadero.CajaValorpagar.setText(ValorPagar);
-                vistaLiquidarParqueadero.CajaCompañere.setText("¡VUELVA PRONTO COMPAÑERE!");
 
                 vistaLiquidarParqueadero.setVisible(false);
                 VistaInicio vistaInicio = new VistaInicio();

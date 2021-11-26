@@ -70,7 +70,7 @@ public class ControladorInicio implements ActionListener {
             Prueba vistaprueba = new Prueba();
             vistaInicio.setVisible(false);
             vistaprueba.setVisible(true);
-            ControladorPrueba controladorPrueba = new ControladorPrueba(vistaprueba);
+            ControladorPrueba controladorPrueba = new ControladorPrueba(vistaprueba, placa);
         }
 
     }

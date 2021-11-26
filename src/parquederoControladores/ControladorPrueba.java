@@ -25,10 +25,11 @@ public class ControladorPrueba implements ActionListener {
     Vehiculo vehiculo = new Vehiculo();
     Prueba vistaPrueba = new Prueba();
 
-    public ControladorPrueba(Prueba prueba) {
+    public ControladorPrueba(Prueba prueba, String placa) {
         
         this.vistaPrueba=prueba;
         prueba.botonRegistrar.addActionListener(this);
+        vistaPrueba.cajaplaca.setText(placa);
     }
 
     @Override
@@ -55,8 +56,6 @@ public class ControladorPrueba implements ActionListener {
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String fechaEntrada=formato.format(entrada);
         vehiculo.setDateEntry(fechaEntrada);
-        
-        
         
         
         if (consultaPropietario.registrarPropietario(propietarios) && consultaVehiculo.registrarVehiculo(vehiculo)) {
